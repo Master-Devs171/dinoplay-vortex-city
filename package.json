@@ -1,0 +1,12 @@
+{
+  "name": "dinoplay-vortex-city",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node test.mjs && node test-storage.mjs",
+    "dev": "node server.cjs",
+    "validate": "node scripts/validate.mjs"
+  },
+  "version": "1.0.0",
+  "license": "MIT"
+}

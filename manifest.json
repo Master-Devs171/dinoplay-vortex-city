@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "vortex-city",
+  "name": "Vórtex City",
+  "version": "1.0.0",
+  "entry": "dist/index.html",
+  "category": "explore",
+  "age": "7+",
+  "cover": "cover.png",
+  "description": "Engole objetos, cresce e explora cinco bairros de uma cidade 3D.",
+  "offline": true,
+  "multiplayer": false,
+  "permissions": [
+    "storage"
+  ],
+  "languages": [
+    "pt-PT"
+  ],
+  "assets": [
+    "dist/app-storage.js",
+    "dist/engine.js",
+    "dist/game.js",
+    "dist/index.html",
+    "dist/sdk/dinoplay-game-sdk.js",
+    "dist/style.css",
+    "dist/vendor/LICENSE.txt",
+    "dist/vendor/three.core.js",
+    "dist/vendor/three.module.js",
+    "cover.png"
+  ],
+  "license": "MIT",
+  "author": "Master-Devs171"
+}
