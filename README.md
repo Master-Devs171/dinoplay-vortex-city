@@ -28,7 +28,7 @@ Fachadas com janelas nas quatro faces, montras, toldos e equipamentos de cobertu
 
 [Jogar agora](https://vortex-city-master171.master-171.chatgpt.site/) · [Código no GitHub](https://github.com/Master-Devs171/dinoplay-vortex-city)
 
-![Vórtex City](cover.png)
+![Vórtex City](cover.jpg)
 
 Pacote DinoPlay: manifest.json aponta para dist/index.html. Inclui o SDK local, guarda progresso através da app quando integrado e permite voltar à biblioteca. Fora da app funciona sem login e guarda o progresso neste dispositivo. Idioma atual: português. Todos os recursos de execução são locais; sem anúncios, pagamentos ou serviços externos.
 

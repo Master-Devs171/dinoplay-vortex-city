@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "id": "vortex-city",
   "name": "Vórtex City",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "entry": "dist/index.html",
   "category": "explore",
   "age": "7+",
-  "cover": "cover.png",
+  "cover": "cover.jpg",
   "description": "Engole objetos, cresce e explora cinco bairros de uma cidade 3D.",
   "offline": true,
   "multiplayer": false,
@@ -26,7 +26,7 @@
     "dist/vendor/LICENSE.txt",
     "dist/vendor/three.core.js",
     "dist/vendor/three.module.js",
-    "cover.png"
+    "cover.jpg"
   ],
   "license": "MIT",
   "author": "Master-Devs171"
