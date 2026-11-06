@@ -9,3 +9,21 @@
 #district{display:block;font-size:9px;color:#c2d7df;margin-top:5px;max-width:130px}@media(max-width:700px){#district{font-size:7px;max-width:90px}}
 
 #dinoplay-exit{position:fixed;bottom:max(10px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:1000;border:1px solid #fff8;border-radius:20px;background:#10263ce8;color:white;padding:8px 16px;font:600 12px system-ui;cursor:pointer}
+
+/* The illustrated city sets the scene before the arena opens. */
+#menu {
+  background: linear-gradient(90deg, #081f36ec, #081f3670 62%, #081f36ad), url('../cover.jpg') center 58% / cover;
+  overflow: auto;
+}
+#menu .brand { text-shadow: 0 3px 18px #081f36; }
+@media (max-width: 700px) {
+  #menu { background-position: center, 48% center; }
+}
+@media (max-width: 700px) and (max-height: 620px) {
+  #menu { justify-content: flex-start; padding-bottom: 58px; }
+  #menu footer { position: static; width: 100%; }
+}
+
+body:not(:has(#menu:not([hidden]), #overlay:not([hidden]))) #dinoplay-exit { display: none; }
+#overlay { padding-bottom: 48px; }
+#overlay > div { max-height: calc(100dvh - 72px); overflow: auto; }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "vortex-city",
   "name": "Vórtex City",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "entry": "dist/index.html",
   "category": "explore",
   "age": "7+",
