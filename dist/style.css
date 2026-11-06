@@ -27,3 +27,8 @@
 body:not(:has(#menu:not([hidden]), #overlay:not([hidden]))) #dinoplay-exit { display: none; }
 #overlay { padding-bottom: 48px; }
 #overlay > div { max-height: calc(100dvh - 72px); overflow: auto; }
+
+#progress { border: 1px solid #63e0eb70; background: #0b2438ef; }
+#progress .track { height: 7px; background: #203e54; }
+#progress #bar { background: linear-gradient(90deg, #25bde3, #8fffd2); }
+#growth-goal { display: block; margin-top: 6px; font-size: 10px; color: #e0f8ff; }
