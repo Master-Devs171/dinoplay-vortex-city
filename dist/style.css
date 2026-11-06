@@ -32,3 +32,17 @@ body:not(:has(#menu:not([hidden]), #overlay:not([hidden]))) #dinoplay-exit { dis
 #progress .track { height: 7px; background: #203e54; }
 #progress #bar { background: linear-gradient(90deg, #25bde3, #8fffd2); }
 #growth-goal { display: block; margin-top: 6px; font-size: 10px; color: #e0f8ff; }
+
+.city-mode { display:grid; gap:6px; margin:0 0 12px; color:#264e65; font-size:13px; font-weight:700; }
+.city-mode select { width:100%; padding:8px; font:inherit; color:#143953; background:#eefbfc; border:1px solid #9eced8; border-radius:10px; }
+#menu .play-card { border-top:4px solid #39b9cc; }
+#progress { box-shadow:0 6px 18px #071d346b; }
+@media (max-height:720px) { #menu { align-items:center; } #menu footer { position:static; } }
+@media (max-height:720px) and (min-width:701px) { #menu footer { position:absolute; } }
+@media (max-height:720px) and (max-width:700px) { #menu { justify-content:flex-start; padding-bottom:52px; } }
+
+#menu { background-image:linear-gradient(90deg,#081928ed,#08192844 57%,#081928b8),url('../cover.jpg'); }
+#menu .play-card { background:#112b40f5; color:#f2fbff; border:1px solid #487f92; border-top:4px solid #54d7dc; }
+#menu .play-card p, #menu .eyebrow, #menu .color-label, #menu .controls-copy, #menu .city-mode { color:#c3e4ef; }
+#menu .record { background:#e0f8fb; color:#133a52; }
+#menu .brand .tag { color:#7be6e7; }

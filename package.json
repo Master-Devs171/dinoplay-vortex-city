@@ -7,6 +7,6 @@
     "dev": "node server.cjs",
     "validate": "node scripts/validate.mjs"
   },
-  "version": "1.0.3",
+  "version": "1.1.0",
   "license": "MIT"
 }

@@ -19,3 +19,14 @@ assert.ok(buildingProfile({type:'tower',tint:4}).h>buildingProfile({type:'tower'
 const skyscraper=new Arena(rng(8));skyscraper.holes=[skyscraper.player];skyscraper.player.r=8;const tall={...skyscraper.objects.find(o=>o.type==='tower'),tint:4,x:0,z:0,px:0,pz:0};skyscraper.objects=[tall];for(let i=0;i<28;i++)skyscraper.update(.05);assert.equal(tall.owner,skyscraper.player);for(let i=0;i<20;i++)skyscraper.update(.05);assert.equal(skyscraper.eaten,1);console.log('Level progression and tall-building sinking passed.');
 
 const districts=new Arena(rng(17));assert.equal(BLOCKS.length,36);assert.equal(new Set(BLOCKS.map(b=>b.district)).size,5);for(const b of BLOCKS){assert.equal(districtAt(b.x,b.z),b.district);const objects=districts.objects.filter(o=>Math.abs(o.x-b.x)<9&&Math.abs(o.z-b.z)<9);if(b.district==='park'){assert.ok(objects.some(o=>o.type==='fountain'));assert.ok(!objects.some(o=>o.type==='tower'))}if(b.district==='market')assert.ok(objects.filter(o=>o.type==='kiosk').length>=4)}for(const h of districts.holes){const food=districts.objects.filter(o=>o.size*1.1<h.r&&Math.hypot(o.x-h.x,o.z-h.z)<6);assert.ok(food.length>=12)}assert.ok(districts.objects.every(o=>Math.abs(o.x)+o.size<EDGE&&Math.abs(o.z)+o.size<EDGE));console.log('Five district layouts, park landmarks, market density and balanced starting food passed.');
+
+const walk=new Arena(rng(4));walk.reset(undefined,true);
+assert.equal(walk.holes.length,1);assert.equal(walk.duration,Infinity);
+const person=walk.objects.find(o=>o.type==='person'),traffic=walk.objects.find(o=>o.type==='car'&&o.route);
+const beforeWalk=person.pz,beforeDrive=traffic.px;
+walk.update(.05);
+assert.notEqual(person.pz,beforeWalk);assert.notEqual(traffic.px,beforeDrive);
+Object.assign(walk.player,{x:person.px,z:person.pz,r:11});
+assert.equal(walk.swallow(walk.player,person),false);
+walk.time=120;walk.update(.05);assert.equal(walk.done,false);
+console.log('Passed: moving traffic, protected pedestrians and free exploration.');
